@@ -23,7 +23,7 @@ public class HomeControllerTest {
                 .andExpect(status().isOk())
                 .andDo(print())
                 .andExpect(view().name("hello"))
-                .andExpect(model().attribute("name",("Jina")));
+                .andExpect(model().attribute("name","Jina"));
 
     }
 }
