@@ -13,6 +13,7 @@ import javax.persistence.*;
 @Builder
 @Entity
 public class Membership {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
