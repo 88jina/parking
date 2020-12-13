@@ -1,4 +1,4 @@
-package com.jina.parking.model;
+package com.jina.parking.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,21 +8,26 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
-
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
 @Builder
 @Entity
-public class InLog {
+public class Payment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @Column(nullable = false)
     private String carNum;
+    @Column(nullable = false)
+    private int sum;
+    @Column(nullable = false)
+    private int received;
+    @Column(nullable = false)
+    private int given;
     @Enumerated(EnumType.STRING)
-    private RoleType type;
+    private PayMethod payMethod;
     @CreationTimestamp
-    private Timestamp inTime;
+    private Timestamp payTime;
 
 }

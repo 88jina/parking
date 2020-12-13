@@ -1,4 +1,4 @@
-package com.jina.parking.model;
+package com.jina.parking.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
