@@ -24,6 +24,5 @@ public class HomeControllerTest {
                 .andDo(print())
                 .andExpect(view().name("hello"))
                 .andExpect(model().attribute("name","Jina"));
-
     }
 }
